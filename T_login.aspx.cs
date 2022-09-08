@@ -26,9 +26,10 @@ namespace Topic_10
             string password = Request.Form["userpasswd"];
             string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
 
+
             SqlConnection sqlconn = new SqlConnection(sql_data);
 
-            string sqlI = $"SELECT  name, password FROM Customers WHERE (name = '{name}')";
+            string sqlI = $"SELECT  * FROM Customers WHERE (name = '{name}')";
             SqlCommand cmd = new SqlCommand(sqlI, sqlconn);
             sqlconn.Open();
 
@@ -40,9 +41,9 @@ namespace Topic_10
                     if (password == reader["password"].ToString())
                     {
                         Session["username"] = name;
+                        Session["userID"] = reader["id"].ToString();
                         Session["login"] = "true";
                         login_status.Text = Request.Form["username"];
-
                     }
                     else
                         login_status.Text = "密碼錯誤";

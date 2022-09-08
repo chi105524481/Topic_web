@@ -116,20 +116,14 @@ New pets</div>
         
         <div class="right_content">
         	<div class="languages_box">
-            <%--<span class="red">Languages:</span>
-            <a href="#" class="selected"><img src="images/gb.gif" alt="" title="" border="0" /></a>
-            <a href="#"><img src="images/fr.gif" alt="" title="" border="0" /></a>
-            <a href="#"><img src="images/de.gif" alt="" title="" border="0" /></a>--%>
+
             </div>
                 <div class="currency">
-                <%--<span class="red">Currency: </span>
-                <a href="#">GBP</a>
-                <a href="#">EUR</a>
-                <a href="#" class="selected">USD</a>--%>
+
                 </div>
                 
               <div class="cart">
-                  <div class="title" id="cart"><span class="title_icon"><img src="images/cart.gif" alt="" title="" />毛孩們的飲食需注意</span>
+                  <div class="title" id="cart"><span class="title_icon"><img src="images/cart.gif" alt="" title="" /></span>
                   <asp:Label ID="index_status" runat="server" Text="index_status"></asp:Label>
                   </div>
                   <asp:Literal ID="CartLink" runat="server"></asp:Literal>
@@ -139,7 +133,7 @@ New pets</div>
             	
         
         
-             <div class="title"><span class="title_icon"><img src="images/bullet3.gif" alt="" title="" /></span></div> 
+             <div class="title"><span class="title_icon"><img src="images/bullet3.gif" alt="" title="" /></span>毛孩們的飲食需注意</div> 
              <div class="about">
              <p>
              <img src="images/about.gif" alt="" title="" class="right" />
@@ -180,12 +174,7 @@ New pets</div>
                 <li><a href="#">貓貓-肉泥</a></li>
                 <li><a href="#">貓貓-罐頭</a></li>
                 <li><a href="#">貓貓-飼料</a></li>
-                <%--<li><a href="#">hollidays gifts</a></li>
-                <li><a href="#">accesories</a></li>
-                <li><a href="#">pets gifts</a></li>
-                <li><a href="#">specials</a></li>
-                <li><a href="#">hollidays gifts</a></li>
-                <li><a href="#">accesories</a></li> --%>                             
+                         
                 </ul>   
              
              </div>
@@ -198,29 +187,12 @@ New pets</div>
                 <li><a href="#">狗狗-餅乾</a></li>
                 <li><a href="#">狗狗-罐頭</a></li>
                 <li><a href="#">狗狗-飼料</a></li>
-                <%--<li><a href="#">hollidays gifts</a></li>
-                <li><a href="#">accesories</a></li>
-                <li><a href="#">pets gifts</a></li>
-                <li><a href="#">specials</a></li>
-                <li><a href="#">hollidays gifts</a></li>
-                <li><a href="#">accesories</a></li>
-                <li><a href="#">pets gifts</a></li>
-                <li><a href="#">specials</a></li>       --%>                                       
+                                 
                 </ul>
                 
              	<div class="title"><span class="title_icon"></span></div> 
                 
-<%--                <ul class="list">
-                <li><a href="#">accesories</a></li>
-                <li><a href="#">pets gifts</a></li>
-                <li><a href="#">specials</a></li>
-                <li><a href="#">hollidays gifts</a></li>
-                <li><a href="#">accesories</a></li>
-                <li><a href="#">pets gifts</a></li>
-                <li><a href="#">specials</a></li>
-                <li><a href="#">hollidays gifts</a></li>
-                <li><a href="#">accesories</a></li>                              
-                </ul>      --%>
+
              
              </div>         
              

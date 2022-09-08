@@ -26,7 +26,7 @@ namespace Topic_10
                 CartLink.Text = "<a href=\"cart.html\" class=\"view_cart\">購物車清單</a>";
             }
             else
-                register_status.Text = "My Cart";
+                register_status.Text = "我的購物車";
         }
 
         protected void register_Click(object sender, EventArgs e)
