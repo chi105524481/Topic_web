@@ -30,17 +30,19 @@
        	<div class="left_content">
             <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>My cart</div>
         
+        	<div class="feat_prod_My cart</div>
+        
         	<div class="feat_prod_box_details">
             
                 <asp:Table ID="Table1" runat="server" class="cart_table" >
                 <asp:TableHeaderRow runat="server" >
-                    <asp:TableHeaderCell runat="server" class="cart_table">account</asp:TableHeaderCell>
-                    <asp:TableHeaderCell runat="server" class="cart_table">password</asp:TableHeaderCell>
-                    <asp:TableHeaderCell runat="server" class="cart_table">name</asp:TableHeaderCell>
-                    <asp:TableHeaderCell runat="server" class="cart_table">account</asp:TableHeaderCell>
+                    <asp:TableHeaderCell runat="server" class="cart_table">&#39006;&#21029;</asp:TableHeaderCell>
+                    <asp:TableHeaderCell runat="server" class="cart_table">&#20839;&#23481;</asp:TableHeaderCell>
+                    <asp:TableHeaderCell runat="server" class="cart_table">&#21934;&#20729;</asp:TableHeaderCell>
+                    <asp:TableHeaderCell runat="server" class="cart_table">&#20491;&#25976;</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
                 </asp:Table>
-            <%--<table class="cart_table" id="CT">
+                <%--<table class="cart_table" id="CT">
             	<tr class="cart_title">
                 	<td>Item pic</td>
                 	<td>Book name</td>
@@ -81,32 +83,26 @@
                 <td> 325$</td>                
                 </tr>                  
             
-            </table>--%>
-            <a href="#" class="continue">&lt; continue</a>
-            <a href="#" class="checkout">checkout &gt;</a>
-            
-
-             
+            </table>--%><%--            <a href="#" class="continue">&lt; continue</a>
+            <a href="#" id="func1" name="func2" class="checkout">--%>
+            <asp:Button ID="buy" class="checkout" runat="server" Text="&#36092;&#36023;" OnClick="buy_Click" /></a> 
             
             </div>	
             
-              
-
-            
-
-            
-        <div class="clear"></div>
+        <div class="clear">
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </div>
         </div><!--end of left content-->
         
         <div class="right_content">
         
                 	<div class="languages_box">
-<%--            <span class="red">Languages:</span>
+                        <%--            <span class="red">Languages:</span>
             <a href="#"><img src="images/gb.gif" alt="" title="" border="0" /></a>
             <a href="#"><img src="images/fr.gif" alt="" title="" border="0" /></a>
             <a href="#"><img src="images/de.gif" alt="" title="" border="0" /></a>--%>
             </div>
-<%--                <div class="currency">
+                    <%--                <div class="currency">
                 <span class="red">Currency: </span>
                 <a href="#">GBP</a>
                 <a href="#">EUR</a>
@@ -127,11 +123,7 @@
               
               </div>
         
-             <div class="title"><span class="title_icon"><img src="images/bullet3.gif" alt="" title="" /></span>毛孩們的飲食需注意</div> 
-             <div class="about">
-             <p>
-             <img src="images/about.gif" alt="" title="" class="right" />
-             你知道嗎？ 有些"愛"可能會是"害"，你所認為的美食，對毛孩們來說可能是有毒，甚至有致命危險性的。常常食用人吃的食物，可能造成毛孩消化不良、胰臟炎、腎臟損傷等問題呢～
+             <div class="title"><span class="title_icon"><img src="images/bullet3.gif" alt="" title="" /></span>&#27611;&#23401;&#20497;&#30340;&#39154;&#39135;&#38656;&#27880;&#24847;所認為的美食，對毛孩們來說可能是有毒，甚至有致命危險性的。常常食用人吃的食物，可能造成毛孩消化不良、胰臟炎、腎臟損傷等問題呢～
              </p>
              
              </div>

@@ -13,11 +13,12 @@ namespace Topic_10
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Form["login"] == "true")
-                if (Request.Form["username"] != null)
-                {
-                    login_status.Text = Request.Form["username"];
-                }
+            
+            if (Session["login"] == "true" && Session["username"] != null)
+            {
+                Response.Redirect("T_index.aspx");
+                login_status.Text = Request.Form["username"];
+            }
         }
 
         protected void login_Click(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace Topic_10
                         Session["userID"] = reader["id"].ToString();
                         Session["login"] = "true";
                         login_status.Text = Request.Form["username"];
+                        Response.Redirect("T_index.aspx");
                     }
                     else
                         login_status.Text = "密碼錯誤";
@@ -53,5 +55,7 @@ namespace Topic_10
                 login_status.Text = "帳號錯誤";
             sqlconn.Close();
         }
+
+
     }
 }

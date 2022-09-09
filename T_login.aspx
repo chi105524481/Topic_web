@@ -15,8 +15,7 @@
        		<div class="logo"><a href="T_index.aspx"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>            
         <div id="menu">
             <ul>                                                                       
-            <%--<li><a href="T_index.aspx">&#39318;&#38913;</a></li>--%>
-            <%--<li><a href="about.html">&#38364;&#26044;&#25105;&#20497;</a></li>--%>
+                <%--<li><a href="T_index.aspx">&#39318;&#38913;</a></li>--%>            <%--<li><a href="about.html">&#38364;&#26044;&#25105;&#20497;</a></li>--%>
             <li><a href="category.html">&#29399;&#29399;</a></li>
             <li><a href="specials.html">&#35987;&#35987;</a></li>
             <li class="selected"><a href="T_login.aspx">&#30331;&#20837;</a></li>
@@ -42,14 +41,14 @@
                     <div class="form_row">
                     <label class="contact"><strong>Username:</strong></label>
                     <asp:TextBox ID="username" runat="server"></asp:TextBox>
-                    <%--<input type="text" id="username" class="contact_input" />--%>
+                        <%--<input type="text" id="username" class="contact_input" />--%>
                     </div>  
 
 
                     <div class="form_row">
                     <label class="contact"><strong>Password:</strong></label>
                     <asp:TextBox ID="userpasswd" runat="server"></asp:TextBox>
-                    <%--<input type="text" id="userpasswd" class="contact_input" />--%>
+                        <%--<input type="text" id="userpasswd" class="contact_input" />--%>
                     </div>                     
 
                     <div class="form_row">
@@ -63,7 +62,7 @@
                     <div class="form_row">
                         <%--<input type="submit" class="register" value="login" />--%>
                         <asp:Button ID="login" class="register" runat="server" Text="login" OnClick="login_Click" />
-                        <asp:Label ID="login_status" runat="server" Text="login_status"></asp:Label>
+                        <asp:Label ID="login_status" runat="server"></asp:Label>
                     </div>   
                     
                 </div>  
@@ -82,7 +81,7 @@
         
                 	<div class="languages_box">
             <span class="red"></span>
-<%--            <a href="#"><img src="images/gb.gif" alt="" title="" border="0" /></a>
+                        <%--            <a href="#"><img src="images/gb.gif" alt="" title="" border="0" /></a>
             <a href="#"><img src="images/fr.gif" alt="" title="" border="0" /></a>
             <a href="#"><img src="images/de.gif" alt="" title="" border="0" /></a>--%>
             </div>
@@ -98,7 +97,7 @@
                   <div class="title"><span class="title_icon"><img src="images/cart.gif" alt="" title="" /></span></div>
                   <%--                  <div class="home_cart_content">
                   3 x items | <span class="red">TOTAL: 100$</span>
-                  </div>--%>                  <%--<a href="cart.html" class="view_cart">view cart</a>--%>
+                  </div>--%><%--<a href="cart.html" class="view_cart">view cart</a>--%>
               
               </div>
         
