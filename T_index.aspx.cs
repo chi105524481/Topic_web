@@ -19,11 +19,14 @@ namespace Topic_10
             if (Session["login"] == "true" && Session["username"] != null)
             {
                 index_status.Text = "Hello ! " + Session["username"].ToString() + Session["userID"].ToString();
-                CartLink.Text = "<a href=\"cart.html\" class=\"view_cart\">購物車清單</a>";
+                cartKink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">購物車清單</a>";
             }
             else
+            {
                 index_status.Text = "我的購物車";
-            CartLink.Text = "";
+                cartKink.Text = "";
+            }
+
 
             string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
 

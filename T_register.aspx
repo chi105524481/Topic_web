@@ -110,7 +110,6 @@
                   <div class="title" id="cart"><span class="title_icon"><img src="images/cart.gif" alt="" title="" /></span>
                   <asp:Label ID="register_status" runat="server" Text=""></asp:Label>
                   </div>
-                  <a href="cart.html" class="view_cart"></a>
                   <asp:Literal ID="CartLink" runat="server"></asp:Literal>
               
               </div>

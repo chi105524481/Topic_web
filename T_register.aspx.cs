@@ -23,10 +23,14 @@ namespace Topic_10
             if (Session["login"] == "true" && Session["username"] != null)
             {
                 register_status.Text = "Hello ! " + Session["username"].ToString();
-                CartLink.Text = "<a href=\"cart.html\" class=\"view_cart\">購物車清單</a>";
+                CartLink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">購物車清單</a>";
             }
             else
+            {
                 register_status.Text = "我的購物車";
+                CartLink.Text = "";
+
+            }                
         }
 
         protected void register_Click(object sender, EventArgs e)

@@ -17,8 +17,8 @@
             <ul>                                                                       
             <li><a href="category.html">狗狗</a></li>
             <li><a href="specials.html">貓貓</a></li>
-            <li><a href="myaccount.html">登入</a></li>
-            <li><a href="register.html">註冊</a></li>
+            <li><a href="T_login.aspx">登入</a></li>
+            <li><a href="T_register.aspx">註冊</a></li>
             </ul>
         </div>     
             
@@ -115,7 +115,11 @@
                 
                 
               <div class="cart">
-                  <div class="title"><span class="title_icon"><img src="images/cart.gif" alt="" title="" /></span>My cart</div>
+                  <div class="title"><span class="title_icon"><img src="images/cart.gif" alt="" title="" /></span>
+                      <asp:Label ID="Cart_status" runat="server" Text="index_status"></asp:Label>
+                  </div>
+                  <asp:Literal ID="CartLink" runat="server"></asp:Literal>
+                  
                   <div class="home_cart_content">
                    <span class="red"></span>
                   </div>
