@@ -15,8 +15,8 @@
        		<div class="logo"><a href="T_index.aspx"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>            
         <div id="menu">
             <ul>                                                                       
-            <li><a href="category.html">狗狗</a></li>
-            <li><a href="specials.html">貓貓</a></li>
+            <li><a href="T_S_dogCan.aspx">狗狗</a></li>
+            <li><a href="T_S_catCan.aspx">貓貓</a></li>
             <li><a href="T_login.aspx">登入</a></li>
             <li><a href="T_register.aspx">註冊</a></li>
             </ul>
@@ -130,29 +130,29 @@
              
              <div class="right_box">
 
-            	<div class="title"><span class="title_icon"><img src="" alt="" title="" /></span>貓貓</div>                 
+                <div class="title"><span class="title_icon"></span>貓貓</div> 
+                
                 <ul class="list">
-                <li><a href="#">accesories</a></li>
-                <li><a href="#">pets gifts</a></li>
-                <li><a href="#">specials</a></li>                          
-                </ul> 
+                <li><a href="#">貓貓-肉泥</a></li>
+                <li><a href="#">貓貓-罐頭</a></li>
+                <li><a href="#">貓貓-飼料</a></li>
+                         
+                </ul>   
               
              
              </div>
              
              <div class="right_box">
              
-             	<div class="title"><span class="title_icon"><img src="" alt="" title="" /></span>狗狗</div> 
+             	<div class="title"><span class="title_icon"></span>狗狗</div> 
                 
                 <ul class="list">
-                <li><a href="#">accesories</a></li>
-                <li><a href="#">pets gifts</a></li>
-                <li><a href="#">specials</a></li>                                        
-                </ul>
-                
-     
-             
-             </div>         
+                <li><a href="#">狗狗-餅乾</a></li>
+                <li><a href="#">狗狗-罐頭</a></li>
+                <li><a href="#">狗狗-飼料</a></li>                                 
+                </ul>                
+             	<div class="title"><span class="title_icon"></span></div>
+             </div>   
              
         
         </div><!--end of right content-->

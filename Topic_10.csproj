@@ -122,16 +122,30 @@
     <Content Include="js\prototype.js" />
     <Content Include="js\scriptaculous.js" />
     <Content Include="lightbox.css" />
+    <Content Include="NewPage.ascx" />
     <Content Include="style.css" />
     <Content Include="T_index.aspx" />
     <Content Include="T_login.aspx" />
     <Content Include="T_MyCart.aspx" />
     <Content Include="T_register.aspx" />
+    <Content Include="T_S_catCan.aspx" />
+    <Content Include="T_S_catDryFood.aspx" />
+    <Content Include="T_S_catWetFood.aspx" />
+    <Content Include="T_S_dogCan.aspx" />
+    <Content Include="T_S_dogCookie.aspx" />
+    <Content Include="T_S_dogFeed.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NewPage.ascx.cs">
+      <DependentUpon>NewPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewPage.ascx.designer.cs">
+      <DependentUpon>NewPage.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="T_index.aspx.cs">
@@ -161,6 +175,48 @@
     </Compile>
     <Compile Include="T_register.aspx.designer.cs">
       <DependentUpon>T_register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="T_S_catCan.aspx.cs">
+      <DependentUpon>T_S_catCan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="T_S_catCan.aspx.designer.cs">
+      <DependentUpon>T_S_catCan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="T_S_catDryFood.aspx.cs">
+      <DependentUpon>T_S_catDryFood.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="T_S_catDryFood.aspx.designer.cs">
+      <DependentUpon>T_S_catDryFood.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="T_S_catWetFood.aspx.cs">
+      <DependentUpon>T_S_catWetFood.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="T_S_catWetFood.aspx.designer.cs">
+      <DependentUpon>T_S_catWetFood.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="T_S_dogCan.aspx.cs">
+      <DependentUpon>T_S_dogCan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="T_S_dogCan.aspx.designer.cs">
+      <DependentUpon>T_S_dogCan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="T_S_dogCookie.aspx.cs">
+      <DependentUpon>T_S_dogCookie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="T_S_dogCookie.aspx.designer.cs">
+      <DependentUpon>T_S_dogCookie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="T_S_dogFeed.aspx.cs">
+      <DependentUpon>T_S_dogFeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="T_S_dogFeed.aspx.designer.cs">
+      <DependentUpon>T_S_dogFeed.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

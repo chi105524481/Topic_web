@@ -18,8 +18,8 @@
             <ul>                                                                       
             <%--<li class="selected"><a href="T_index.aspx">&#39318;&#38913;</a></li>--%>
             <%--<li><a href="about.html">&#38364;&#26044;&#25105;&#20497;</a></li>--%>
-            <li><a href="category.html">&#29399;&#29399;</a></li>
-            <li><a href="specials.html">&#35987;&#35987;</a></li>
+            <li><a href="T_S_dogCan.aspx">&#29399;&#29399;</a></li>
+            <li><a href="T_S_catCan.aspx">&#35987;&#35987;</a></li>
             <li><a href="T_login.aspx">&#30331;&#20837;</a></li>
             <li><a href="T_register.aspx">&#35387;&#20874;</a></li>
             <%--<li><a href="details.html">prices</a></li>
@@ -143,59 +143,28 @@ New pets</div>
              </div>
              
              <div class="right_box">
-             
-             	<div class="title"><span class="title_icon"></span></div> 
-<%--                    <div class="new_prod_box">
-                        <a href="details.html">product name</a>
-                        <div class="new_prod_bg">
-                        <span class="new_icon"><img src="images/promo_icon.gif" alt="" title="" /></span>
-                        <a href="details.html"><img src="images/thumb1.gif" alt="" title="" class="thumb" border="0" /></a>
-                        </div>           
-                    </div>
-                    
-                    <div class="new_prod_box">
-                        <a href="details.html">product name</a>
-                        <div class="new_prod_bg">
-                        <span class="new_icon"><img src="images/promo_icon.gif" alt="" title="" /></span>
-                        <a href="details.html"><img src="images/thumb2.gif" alt="" title="" class="thumb" border="0" /></a>
-                        </div>           
-                    </div>                    
-                    
-                    <div class="new_prod_box">
-                        <a href="details.html">product name</a>
-                        <div class="new_prod_bg">
-                        <span class="new_icon"><img src="images/promo_icon.gif" alt="" title="" /></span>
-                        <a href="details.html"><img src="images/thumb3.gif" alt="" title="" class="thumb" border="0" /></a>
-                        </div>           
-                    </div>   --%>
-                <div class="title"><span class="title_icon"></span>貓貓</div> 
+
+             <div class="title"><span class="title_icon"></span>貓貓</div> 
                 
                 <ul class="list">
-                <li><a href="#">貓貓-肉泥</a></li>
-                <li><a href="#">貓貓-罐頭</a></li>
-                <li><a href="#">貓貓-飼料</a></li>
-                         
-                </ul>   
+                <li><a href="T_S_catWetFood.aspx">貓貓-肉泥</a></li>
+                <li><a href="T_S_catCan.aspx">貓貓-罐頭</a></li>
+                <li><a href="T_S_catDryFood.aspx">貓貓-飼料</a></li>
+                </ul>  
              
              </div>
              
              <div class="right_box">
-             
+
              	<div class="title"><span class="title_icon"></span>狗狗</div> 
                 
                 <ul class="list">
-                <li><a href="#">狗狗-餅乾</a></li>
-                <li><a href="#">狗狗-罐頭</a></li>
-                <li><a href="#">狗狗-飼料</a></li>
-                                 
-                </ul>
-                
-             	<div class="title"><span class="title_icon"></span></div> 
-                
-
-             
-             </div>         
-             
+                <li><a href="T_S_dogCookie.aspx">狗狗-餅乾</a></li>
+                <li><a href="T_S_dogCan.aspx">狗狗-罐頭</a></li>
+                <li><a href="T_S_dogFeed.aspx">狗狗-飼料</a></li>
+                </ul>           
+             	<div class="title"><span class="title_icon"></span></div>
+             </div>
         
         </div><!--end of right content-->
         

@@ -15,7 +15,7 @@ namespace Topic_10
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //購物車提示
             if (Session["login"] == "true" && Session["username"] != null)
             {
                 index_status.Text = "Hello ! " + Session["username"].ToString() + Session["userID"].ToString();

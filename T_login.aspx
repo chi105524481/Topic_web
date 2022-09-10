@@ -16,8 +16,8 @@
         <div id="menu">
             <ul>                                                                       
                 <%--<li><a href="T_index.aspx">&#39318;&#38913;</a></li>--%>            <%--<li><a href="about.html">&#38364;&#26044;&#25105;&#20497;</a></li>--%>
-            <li><a href="category.html">&#29399;&#29399;</a></li>
-            <li><a href="specials.html">&#35987;&#35987;</a></li>
+            <li><a href="T_S_dogCan.aspx">&#29399;&#29399;</a></li>
+            <li><a href="T_S_catCan.aspx">&#35987;&#35987;</a></li>
             <li class="selected"><a href="T_login.aspx">&#30331;&#20837;</a></li>
             <li><a href="T_register.aspx">&#35387;&#20874;</a></li>
             </ul>
