@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="T_MyCart.aspx.cs" Inherits="Topic_10.T_MyCart" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="T_detail.aspx.cs" Inherits="Topic_10.T_detail" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,10 +28,7 @@
        
        <div class="center_content">
        	<div class="left_content">
-               <div class="crumb_nav">
-            <a href="T_detail.aspx">查看訂單</a>
-            </div>
-            <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>我的購物車</div>
+            <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>訂單</div>
         
         	<div class="feat_prod_My cart</div>
         
@@ -88,12 +85,11 @@
             
             </table>--%><%--            <a href="#" class="continue">&lt; continue</a>
             <a href="#" id="func1" name="func2" class="checkout">--%>
-            <asp:Button ID="buy" class="checkout" runat="server" Text="&#36092;&#36023;" OnClick="buy_Click" /></a> 
+            <%--<asp:Button ID="buy" class="checkout" runat="server" Text="&#36092;&#36023;" OnClick="buy_Click" /></a> --%>
             
             </div>	
             
         <div class="clear">
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             </div>
         </div><!--end of left content-->
         

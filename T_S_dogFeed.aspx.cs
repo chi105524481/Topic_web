@@ -33,7 +33,7 @@ namespace Topic_10
             //購物車提示
             if (Session["login"] == "true" && Session["username"] != null)
             {
-                Status.Text = "Hello ! " + Session["username"].ToString() + Session["userID"].ToString();
+                Status.Text = "Hello ! " + Session["username"].ToString();
                 cartLink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">&gt;&gt;購物車清單</a>";
             }
             else

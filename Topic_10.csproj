@@ -124,10 +124,12 @@
     <Content Include="lightbox.css" />
     <Content Include="NewPage.ascx" />
     <Content Include="style.css" />
+    <Content Include="T_detail.aspx" />
     <Content Include="T_index.aspx" />
     <Content Include="T_login.aspx" />
     <Content Include="T_MyCart.aspx" />
     <Content Include="T_register.aspx" />
+    <Content Include="T_select.aspx" />
     <Content Include="T_S_catCan.aspx" />
     <Content Include="T_S_catDryFood.aspx" />
     <Content Include="T_S_catWetFood.aspx" />
@@ -148,6 +150,13 @@
       <DependentUpon>NewPage.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_detail.aspx.cs">
+      <DependentUpon>T_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="T_detail.aspx.designer.cs">
+      <DependentUpon>T_detail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="T_index.aspx.cs">
       <DependentUpon>T_index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,6 +184,13 @@
     </Compile>
     <Compile Include="T_register.aspx.designer.cs">
       <DependentUpon>T_register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="T_select.aspx.cs">
+      <DependentUpon>T_select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="T_select.aspx.designer.cs">
+      <DependentUpon>T_select.aspx</DependentUpon>
     </Compile>
     <Compile Include="T_S_catCan.aspx.cs">
       <DependentUpon>T_S_catCan.aspx</DependentUpon>

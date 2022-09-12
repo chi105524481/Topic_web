@@ -26,8 +26,11 @@ namespace Topic_10
                 CartLink.Text = "<a href=\"cart.html\" class=\"view_cart\">購物車清單</a>";
             }
             else
+            {
                 Cart_status.Text = "我的購物車";
-            CartLink.Text = "";
+                CartLink.Text = "";
+            }
+
 
             //左邊框架顯示(商品)
             if (Session["login"] == "true" && Session["username"] != null)
