@@ -20,13 +20,14 @@ namespace Topic_10
             if (Session["login"] == "true" && Session["username"] != null)
             {
                 Cart_status.Text = "Hello ! " + Session["username"].ToString();
-                //CartLink.Text = "<a href=\"cart.html\" class=\"view_cart\">購物車清單</a>";
-                CartLink.Text = "";
+                CartLink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">購物車清單</a>";
+                logInOut.Text = $"登出";
             }
             else
             {
                 Cart_status.Text = "我的購物車";
                 CartLink.Text = "";
+                logInOut.Text = $"登入";
             }
 
 

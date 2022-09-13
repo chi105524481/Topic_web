@@ -15,18 +15,23 @@ namespace Topic_10
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //登入或登出
+
+
+
             //購物車提示
             if (Session["login"] == "true" && Session["username"] != null)
             {
                 index_status.Text = "Hello ! " + Session["username"].ToString();
                 cartKink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">購物車清單</a>";
+                logInOut.Text = $"登出";
             }
             else
             {
                 index_status.Text = "我的購物車";
                 cartKink.Text = "";
+                logInOut.Text = $"登入";
             }
-
 
             string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
 

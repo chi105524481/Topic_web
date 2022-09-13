@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="T_login.aspx.cs" Inherits="Topic_10.T_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="T_login.aspx.cs" Inherits="Topic_10.T_login" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,8 +18,8 @@
                 <%--<li><a href="T_index.aspx">&#39318;&#38913;</a></li>--%>            <%--<li><a href="about.html">&#38364;&#26044;&#25105;&#20497;</a></li>--%>
             <li><a href="T_S_dogCan.aspx">&#29399;&#29399;</a></li>
             <li><a href="T_S_catCan.aspx">&#35987;&#35987;</a></li>
-            <li class="selected"><a href="T_login.aspx">&#30331;&#20837;</a></li>
             <li><a href="T_register.aspx">&#35387;&#20874;</a></li>
+            <li class="selected"><a href="logout.ashx"><asp:Literal ID="logInOut" runat="server"></asp:Literal></a></li>
             </ul>
         </div>     
             
@@ -39,14 +39,14 @@
               	<div class="contact_form">
                 <div class="form_subtitle">&#36664;&#20837;&#24115;&#34399;&#23494;&#30908;&#30331;&#20837;</div>
                     <div class="form_row">
-                    <label class="contact"><strong>Username:</strong></label>
+                    <label class="contact"><strong>使用者名稱:</strong></label>
                     <asp:TextBox ID="username" runat="server"></asp:TextBox>
                         <%--<input type="text" id="username" class="contact_input" />--%>
                     </div>  
 
 
                     <div class="form_row">
-                    <label class="contact"><strong>Password:</strong></label>
+                    <label class="contact"><strong>使用者密碼:</strong></label>
                     <asp:TextBox ID="userpasswd" runat="server"></asp:TextBox>
                         <%--<input type="text" id="userpasswd" class="contact_input" />--%>
                     </div>                     

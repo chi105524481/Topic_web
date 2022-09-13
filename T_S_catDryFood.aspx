@@ -21,10 +21,8 @@
             <ul>
             <li class="selected"><a href="T_S_dogCan.aspx">狗狗</a></li>
             <li><a href="T_S_catCan.aspx">貓貓</a></li>
-            <li><a href="T_login.aspx">登入</a></li>
             <li><a href="T_register.aspx">註冊</a></li>
-<%--            <li><a href="details.html">prices</a></li>
-            <li><a href="contact.html">contact</a></li>--%>
+            <li><a href="logout.ashx"><asp:Literal ID="logInOut" runat="server"></asp:Literal></a></li>
             </ul>
         </div>     
             

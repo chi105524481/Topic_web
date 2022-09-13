@@ -24,8 +24,8 @@
                 <asp:AdRotator ID="AdRotator1" runat="server" />
             <li><a href="T_S_dogCan.aspx">&#29399;&#29399;</a></li>
             <li><a href="T_S_catCan.aspx">&#35987;&#35987;</a></li>
-            <li><a href="T_login.aspx">&#30331;&#20837;</a></li>
             <li><a href="T_register.aspx">&#35387;&#20874;</a></li>
+            <li><a href="logout.ashx"><asp:Literal ID="logInOut" runat="server"></asp:Literal></a></li>
             </ul>
         </div>     
             
@@ -36,7 +36,8 @@
        <div class="center_content">
        	<div class="left_content">
         	<div class="crumb_nav">
-            <a href="index.html">home</a>
+            <a href="index.aspx">home</a>
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             </div>
             <div class="title"><span class="title_icon"></span>Product name</div>
         

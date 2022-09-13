@@ -17,8 +17,8 @@
             <ul>                                                                       
             <li><a href="T_S_dogCan.aspx">狗狗</a></li>
             <li><a href="T_S_catCan.aspx">貓貓</a></li>
-            <li><a href="T_login.aspx">登入</a></li>
             <li><a href="T_register.aspx">註冊</a></li>
+            <li><a href="logout.ashx"><asp:Literal ID="logInOut" runat="server"></asp:Literal></a></li>
             </ul>
         </div>     
             
@@ -133,29 +133,27 @@
              
              <div class="right_box">
 
-                <div class="title"><span class="title_icon"></span>貓貓</div> 
+             <div class="title"><span class="title_icon"></span>貓貓</div> 
                 
                 <ul class="list">
-                <li><a href="#">貓貓-肉泥</a></li>
-                <li><a href="#">貓貓-罐頭</a></li>
-                <li><a href="#">貓貓-飼料</a></li>
-                         
-                </ul>   
-              
+                <li><a href="T_S_catWetFood.aspx">貓貓-肉泥</a></li>
+                <li><a href="T_S_catCan.aspx">貓貓-罐頭</a></li>
+                <li><a href="T_S_catDryFood.aspx">貓貓-飼料</a></li>
+                </ul>  
              
              </div>
              
              <div class="right_box">
-             
+
              	<div class="title"><span class="title_icon"></span>狗狗</div> 
                 
                 <ul class="list">
-                <li><a href="#">狗狗-餅乾</a></li>
-                <li><a href="#">狗狗-罐頭</a></li>
-                <li><a href="#">狗狗-飼料</a></li>                                 
-                </ul>                
+                <li><a href="T_S_dogCookie.aspx">狗狗-餅乾</a></li>
+                <li><a href="T_S_dogCan.aspx">狗狗-罐頭</a></li>
+                <li><a href="T_S_dogFeed.aspx">狗狗-飼料</a></li>
+                </ul>           
              	<div class="title"><span class="title_icon"></span></div>
-             </div>   
+             </div>
              
         
         </div><!--end of right content-->

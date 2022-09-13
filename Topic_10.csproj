@@ -142,6 +142,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="logout.ashx.cs">
+      <DependentUpon>logout.ashx</DependentUpon>
+    </Compile>
     <Compile Include="NewPage.ascx.cs">
       <DependentUpon>NewPage.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,6 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\Thumbs.db" />
+    <Content Include="logout.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

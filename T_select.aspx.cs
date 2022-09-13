@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace Topic_10
 {
@@ -16,67 +17,81 @@ namespace Topic_10
             int total = 0;
             int freight = 60;
 
+           int foodID = Convert.ToInt32(Request["petfood"]);
+            Label1.Text = Request["petfood"];
+
             //右邊框架顯示(購物車連結)
             if (Session["login"] == "true" && Session["username"] != null)
             {
                 status.Text = "Hello ! " + Session["username"].ToString() + Session["userID"].ToString();
-                cartLink.Text = "<a href=\"cart.html\" class=\"view_cart\">購物車清單</a>";
+                cartLink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">購物車清單</a>";
+                logInOut.Text = $"登出";
             }
             else
             {
                 status.Text = "我的購物車";
                 cartLink.Text = "";
+                logInOut.Text = $"登入";
             }
 
 
             //左邊框架顯示(商品)
-            if (Session["login"] == "true" && Session["username"] != null)
-            { }
-                string sqlInquire = "SELECT *  FROM  PetsFood WHERE id = 3";
+            if (Session["login"] == "true" && Session["username"] != null && Request["petfood"] != null)
+            {
+                string sqlInquire = $"SELECT *  FROM  PetsFood WHERE id = {Request["petfood"]}";
                 string s_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
                 SqlConnection conn = new SqlConnection(s_data);
-                if (Session["userID"] != null)
-                {
-                    sqlInquire = $"SELECT *  FROM Cart , PetsFood where customerID = {Session["userID"]} " +
-                        $"and (Cart.PetsFoodID = PetsFood.id)";
-                }
+
                 SqlCommand cmd = new SqlCommand(sqlInquire, conn);
                 conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
-            
 
-                //購物車內容
+
+                //左邊商品細節顯示
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                //TableRow Tr = new TableRow();
-                //TableCell Tc = new TableCell();
+                    L_content.Text = dr["content"].ToString();
+                    L_price.Text = dr["price"].ToString();
+                    L_image.Text = $"<img src=\"{dr["image"].ToString()}\" alt=\"\" title=\"\" border=\"0\" />";
 
-                //Tc.Controls.Add(new LiteralControl(
-                //    String.Format($"<tr border=\"1\" class=\"cart_thumb\">" +
-                //    $"<td>{dr["pet"]}{dr["kind"]}</td>" +
-                //    //$"<td>{dr["kind"]}</td>" +
-                //    $"<td>{dr["content"]}</td>" +
-                //    $"<td>{dr["price"]}</td>" +
-                //    $"<td>{dr["amount"]}</td>" +
-                //    $"</tr>")));
-                //Tr.Cells.Add(Tc);
-                //Table1.Rows.Add(Tr);
-                L_content.Text = dr["content"].ToString();
-                L_price.Text = dr["price"].ToString();
-                L_image.Text = $"<img src=\"{dr["image"].ToString()}\" alt=\"\" title=\"\" border=\"0\" />";
-
-
-
+                }
             }
-            
 
         }
 
 
         protected void OnCart_Click(object sender, EventArgs e)
         {
+            //加入購物車
+            int cusID = 0;
+            int foodID = 0;
+            int CartAmount = 0;
+            if (Session["login"] == "true" && Session["username"] != null)
+            {
+                cusID = Convert.ToInt32(Session["userID"]);
+                foodID = Convert.ToInt32(Request["petfood"]);
+                CartAmount = Convert.ToInt32(amountIN.Text.ToString());
+                string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+
+                SqlConnection sqlconn = new SqlConnection(sql_data);
+                sqlconn.Open();
+
+                string sqlInquire = $"INSERT INTO Cart(customerID , PetsFoodID , amount) VALUES(@customerID , @PetsFoodID ,@amount) ";
+                SqlCommand cmd = new SqlCommand(sqlInquire, sqlconn);
+
+                cmd.Parameters.Add("@customerID", SqlDbType.NVarChar);
+                cmd.Parameters["@customerID"].Value = cusID;
+                cmd.Parameters.Add("@PetsFoodID", SqlDbType.NVarChar);
+                cmd.Parameters["@PetsFoodID"].Value = foodID;
+                cmd.Parameters.Add("@amount", SqlDbType.NVarChar);
+                cmd.Parameters["@amount"].Value = CartAmount;
+
+                cmd.ExecuteNonQuery();
+
+                sqlconn.Close();
+            }
 
         }
 

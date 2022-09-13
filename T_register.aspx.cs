@@ -24,11 +24,13 @@ namespace Topic_10
             {
                 register_status.Text = "Hello ! " + Session["username"].ToString();
                 CartLink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">購物車清單</a>";
+                logInOut.Text = $"登出";
             }
             else
             {
                 register_status.Text = "我的購物車";
                 CartLink.Text = "";
+                logInOut.Text = $"登入";
 
             }                
         }

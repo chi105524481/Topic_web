@@ -22,13 +22,15 @@ namespace Topic_10
             //右邊框架顯示(購物車連結)
             if (Session["login"] == "true" && Session["username"] != null)
             {
-                Cart_status.Text = "Hello ! " + Session["username"].ToString() + Session["userID"].ToString();
-                CartLink.Text = "<a href=\"cart.html\" class=\"view_cart\">購物車清單</a>";
+                Cart_status.Text = "Hello ! " + Session["username"].ToString();
+                //CartLink.Text = "<a href=\"cart.html\" class=\"view_cart\">購物車清單</a>";
+                logInOut.Text = $"登出";
             }
             else
             {
                 Cart_status.Text = "我的購物車";
                 CartLink.Text = "";
+                logInOut.Text = $"登入";
             }
 
 
@@ -98,13 +100,13 @@ namespace Topic_10
             sqlconn.Open();
             //新增 Orders
             string sqlInsertOrders = $"INSERT INTO Orders(CustomersID,PetsFoodID,amount,amountDue) " +
-                $"VALUES(@CustomersID , @PetsFoodID ,@amount ,@amountDue) ";
-            
+                $"VALUES(@CustomersID , @PetsFoodID ,@amount ,@amountDue) ";            
 
             //查詢 Carts
             string sqlSelectCustomers = $"SELECT *  FROM Cart , PetsFood " +
                 $"where customerID = {Session["userID"]} " +
-                $"and (Cart.PetsFoodID = PetsFood.id)";            
+                $"and (Cart.PetsFoodID = PetsFood.id)";
+
             SqlCommand cmdSelect = new SqlCommand(sqlSelectCustomers, sqlconn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmdSelect);
             DataSet ds = new DataSet();
@@ -132,6 +134,14 @@ namespace Topic_10
                 cmdInsert.ExecuteNonQuery();
 
             }
+
+            //刪除 Cart
+            string sqlDeleteCart = $"DELETE FROM Cart WHERE customerID = {Session["userID"]}";
+            SqlCommand cmdDelete = new SqlCommand(sqlDeleteCart, sqlconn);
+            cmdDelete.ExecuteNonQuery();
+            sqlconn.Close();
+
+            Response.Redirect("T_detail.aspx");
         }
     }
 }

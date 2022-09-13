@@ -19,8 +19,8 @@
             <li><a href="about.html">&#38364;&#26044;</a></li>--%>
             <li><a href="T_S_dogCan.aspx">&#29399;&#29399;</a></li>
             <li><a href="T_S_catCan.aspx">&#35987;&#35987;</a></li>
-            <li><a href="T_login.aspx">&#30331;&#20837;</a></li>
             <li class="selected"><a href="T_register.aspx">&#35387;&#20874;</a></li>
+            <li><a href="logout.ashx"><asp:Literal ID="logInOut" runat="server"></asp:Literal></a></li>
             </ul>
         </div>     
             
@@ -80,8 +80,7 @@
 
                     
                     <div class="form_row">
-                    <asp:Label ID="check" runat="server" Text="結果檢查"></asp:Label>
-                    <asp:Button ID="register" runat="server" Text="register" class="register" OnClick="register_Click" />
+                    <asp:Button ID="register" runat="server" Text="註冊" class="register" OnClick="register_Click" />
                     </div>   
                   </form>     
                 </div>  

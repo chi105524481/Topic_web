@@ -35,11 +35,13 @@ namespace Topic_10
             {
                 Status.Text = "Hello ! " + Session["username"].ToString();
                 cartLink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">&gt;&gt;購物車清單</a>";
+                logInOut.Text = $"登出";
             }
             else
             {
                 Status.Text = "尚未登入";
                 cartLink.Text = "";
+                logInOut.Text = $"登入";
             }
             //連接資料庫
             string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
@@ -74,19 +76,37 @@ namespace Topic_10
             adapter.Fill(dataset, (page - 1) * 10, 10, "PetsFood");
 
 
-
-            foreach (DataRow dr in dataset.Tables[0].Rows)
+            if (Session["login"] == "true" && Session["username"] != null)
             {
+                foreach (DataRow dr in dataset.Tables[0].Rows)
+                {
                 HtmlGenericControl newControl = new HtmlGenericControl($"div class=\"new_prod_box\"");
                 newControl.ID = "NEWControl=" + Index;
-                newControl.InnerHtml += $" <a href=\"details.html\">{dr["id"]}{dr["pet"]}{dr["kind"]}</a>";
+                newControl.InnerHtml += $" <a href=\"T_select.aspx?petfood={dr["id"]}\">{dr["id"]}{dr["pet"]}{dr["kind"]}</a>";
                 newControl.InnerHtml += $"<div class=\"new_prod_bg\">";
 
-                newControl.InnerHtml += $"<a href=\"details.html\"><img src={dr["image"]} style=\"height:100px;\" alt=\"\" title=\"\" class=\"thumb\" border=\"0\" /></a>";
+                newControl.InnerHtml += $"<a href=\"T_select.aspx?petfood={dr["id"]}\"><img src={dr["image"]} style=\"height:100px;\" alt=\"\" title=\"\" class=\"thumb\" border=\"0\" /></a>";
                 newControl.InnerHtml += $" </div>";
 
 
                 PlaceHolder1.Controls.Add(newControl);
+                }
+            }
+            else
+            {
+                foreach (DataRow dr in dataset.Tables[0].Rows)
+                {
+                    HtmlGenericControl newControl = new HtmlGenericControl($"div class=\"new_prod_box\"");
+                    newControl.ID = "NEWControl=" + Index;
+                    newControl.InnerHtml += $" <a href=\"T_login.aspx\">{dr["id"]}{dr["pet"]}{dr["kind"]}</a>";
+                    newControl.InnerHtml += $"<div class=\"new_prod_bg\">";
+
+                    newControl.InnerHtml += $"<a href=\"T_login.aspx\"><img src={dr["image"]} style=\"height:100px;\" alt=\"\" title=\"\" class=\"thumb\" border=\"0\" /></a>";
+                    newControl.InnerHtml += $" </div>";
+
+
+                    PlaceHolder1.Controls.Add(newControl);
+                }
             }
         }
     }
