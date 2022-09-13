@@ -45,7 +45,7 @@ namespace Topic_10
             string R_tel = this.R_tel.Text;
             string R_address = this.R_address.Text;
 
-            string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+            string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
 
             SqlConnection sqlconn = new SqlConnection(sql_data);
             sqlconn.Open();

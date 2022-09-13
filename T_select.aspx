@@ -36,10 +36,9 @@
        <div class="center_content">
        	<div class="left_content">
         	<div class="crumb_nav">
-            <a href="index.aspx">home</a>
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <a href=""></a>
             </div>
-            <div class="title"><span class="title_icon"></span>Product name</div>
+            <div class="title"><span class="title_icon"></span></div>
         
         	<div class="feat_prod_box_details">
                 
@@ -55,12 +54,12 @@
                 <div class="prod_det_box">
                 	<div class="box_top"></div>
                     <div class="box_center">
-                    <div class="prod_title">Details</div>
+                    <div class="prod_title">商品明細</div>
                     <p class="details">
                         <asp:Literal ID="L_content" runat="server"></asp:Literal>
                     </p>
                     
-                        <div class="price"><strong>PRICE:</strong> 
+                        <div class="price"><strong>價格:</strong> 
                         <span class="red">
                         <asp:Literal ID="L_price" runat="server"></asp:Literal>元
                         </span></div>

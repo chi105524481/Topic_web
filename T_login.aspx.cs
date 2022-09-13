@@ -25,7 +25,7 @@ namespace Topic_10
         {
             string name = Request.Form["username"];
             string password = Request.Form["userpasswd"];
-            string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+            string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
 
 
             SqlConnection sqlconn = new SqlConnection(sql_data);

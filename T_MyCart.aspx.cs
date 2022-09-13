@@ -38,7 +38,7 @@ namespace Topic_10
             if (Session["login"] == "true" && Session["username"] != null)
             {
                 string sqlInquire = "SELECT *  FROM Cart , PetsFood where customerID = 3 and (Cart.PetsFoodID = PetsFood.id)";
-                string s_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+                string s_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
                 SqlConnection conn = new SqlConnection(s_data);
                 if (Session["userID"] != null)
                 {
@@ -95,7 +95,7 @@ namespace Topic_10
         protected void buy_Click(object sender, EventArgs e)
         {
             //清空購物車，新增進訂單
-            string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+            string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(sql_data);
             sqlconn.Open();
             //新增 Orders

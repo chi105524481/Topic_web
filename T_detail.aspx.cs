@@ -36,7 +36,7 @@ namespace Topic_10
             { 
                 string sqlInquire = "SELECT *  FROM Orders , PetsFood " +
                 "where Orders.customersID = 1003 and Orders.PetsFoodID = PetsFood.id";
-                string s_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+                string s_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
                 SqlConnection conn = new SqlConnection(s_data);
                 if (Session["userID"] != null)
                 {

@@ -18,12 +18,11 @@ namespace Topic_10
             int freight = 60;
 
            int foodID = Convert.ToInt32(Request["petfood"]);
-            Label1.Text = Request["petfood"];
 
             //右邊框架顯示(購物車連結)
             if (Session["login"] == "true" && Session["username"] != null)
             {
-                status.Text = "Hello ! " + Session["username"].ToString() + Session["userID"].ToString();
+                status.Text = "Hello ! " + Session["username"].ToString();
                 cartLink.Text = "<a href=\"T_MyCart.aspx\" class=\"view_cart\">購物車清單</a>";
                 logInOut.Text = $"登出";
             }
@@ -39,7 +38,7 @@ namespace Topic_10
             if (Session["login"] == "true" && Session["username"] != null && Request["petfood"] != null)
             {
                 string sqlInquire = $"SELECT *  FROM  PetsFood WHERE id = {Request["petfood"]}";
-                string s_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+                string s_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
                 SqlConnection conn = new SqlConnection(s_data);
 
                 SqlCommand cmd = new SqlCommand(sqlInquire, conn);
@@ -73,7 +72,7 @@ namespace Topic_10
                 cusID = Convert.ToInt32(Session["userID"]);
                 foodID = Convert.ToInt32(Request["petfood"]);
                 CartAmount = Convert.ToInt32(amountIN.Text.ToString());
-                string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+                string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
 
                 SqlConnection sqlconn = new SqlConnection(sql_data);
                 sqlconn.Open();

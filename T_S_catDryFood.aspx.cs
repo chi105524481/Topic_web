@@ -44,7 +44,7 @@ namespace Topic_10
                 logInOut.Text = $"登入";
             }
             //連接資料庫
-            string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString"].ConnectionString;
+            string sql_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
 
             SqlConnection sqlconn = new SqlConnection(sql_data);
             sqlconn.Open();
@@ -82,7 +82,7 @@ namespace Topic_10
                 {
                 HtmlGenericControl newControl = new HtmlGenericControl($"div class=\"new_prod_box\"");
                 newControl.ID = "NEWControl=" + Index;
-                newControl.InnerHtml += $" <a href=\"T_select.aspx?petfood={dr["id"]}\">{dr["id"]}{dr["pet"]}{dr["kind"]}</a>";
+                newControl.InnerHtml += $" <a href=\"T_select.aspx?petfood={dr["id"]}\"></a>";
                 newControl.InnerHtml += $"<div class=\"new_prod_bg\">";
 
                 newControl.InnerHtml += $"<a href=\"T_select.aspx?petfood={dr["id"]}\"><img src={dr["image"]} style=\"height:100px;\" alt=\"\" title=\"\" class=\"thumb\" border=\"0\" /></a>";
@@ -98,7 +98,7 @@ namespace Topic_10
                 {
                     HtmlGenericControl newControl = new HtmlGenericControl($"div class=\"new_prod_box\"");
                     newControl.ID = "NEWControl=" + Index;
-                    newControl.InnerHtml += $" <a href=\"T_login.aspx\">{dr["id"]}{dr["pet"]}{dr["kind"]}</a>";
+                    newControl.InnerHtml += $" <a href=\"T_login.aspx\"></a>";
                     newControl.InnerHtml += $"<div class=\"new_prod_bg\">";
 
                     newControl.InnerHtml += $"<a href=\"T_login.aspx\"><img src={dr["image"]} style=\"height:100px;\" alt=\"\" title=\"\" class=\"thumb\" border=\"0\" /></a>";
