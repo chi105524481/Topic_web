@@ -57,3 +57,7 @@ C:\Users\User20190418\Desktop\Topic_10\obj\Debug\Topic_10.csproj.CoreCompileInpu
 C:\Users\User20190418\Desktop\Topic_10\obj\Debug\Topic_10.csproj.CopyComplete
 C:\Users\User20190418\Desktop\Topic_10\obj\Debug\Topic_10.dll
 C:\Users\User20190418\Desktop\Topic_10\obj\Debug\Topic_10.pdb
+C:\Users\User20190418\Desktop\Topic_10\bin\EntityFramework.dll
+C:\Users\User20190418\Desktop\Topic_10\bin\EntityFramework.SqlServer.dll
+C:\Users\User20190418\Desktop\Topic_10\bin\EntityFramework.xml
+C:\Users\User20190418\Desktop\Topic_10\bin\EntityFramework.SqlServer.xml
