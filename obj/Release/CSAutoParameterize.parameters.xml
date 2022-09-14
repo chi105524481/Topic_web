@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="petsConnectionString-Web.config Connection String" description="petsConnectionString 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=pets;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\User20190418\\Desktop\\Topic_10\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='petsConnectionString']/@connectionString" />
-  </parameter>
-  <parameter name="petsConnectionString2-Web.config Connection String" description="petsConnectionString2 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=pets;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\User20190418\\Desktop\\Topic_10\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='petsConnectionString2']/@connectionString" />
-  </parameter>
-  <parameter name="petsConnectionString3-Web.config Connection String" description="petsConnectionString3 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=pets;User ID=PetsFood;Password=chi105524481" tags="SqlConnectionString">
+  <parameter name="petsConnectionString3-Web.config Connection String" description="petsConnectionString3 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="Data Source=tcp:topic-10dbserver.database.windows.net,1433;Initial Catalog=Topic_10_db;User Id=HenryChi@topic-10dbserver;Password=Chi105524481" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\User20190418\\Desktop\\Topic_10\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='petsConnectionString3']/@connectionString" />
   </parameter>
 </parameters>

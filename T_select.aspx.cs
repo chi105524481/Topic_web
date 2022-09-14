@@ -90,6 +90,8 @@ namespace Topic_10
                 cmd.ExecuteNonQuery();
 
                 sqlconn.Close();
+
+                Response.Redirect("T_MyCart.aspx");
             }
 
         }

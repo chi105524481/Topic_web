@@ -38,7 +38,7 @@ namespace Topic_10
         protected void register_Click(object sender, EventArgs e)
         {
 
-
+            int reCMD = -1;
             string R_name = this.R_name.Text;
             string R_password = this.R_passwd.Text;
             string R_email = this.R_email.Text;
@@ -49,13 +49,15 @@ namespace Topic_10
 
             SqlConnection sqlconn = new SqlConnection(sql_data);
             sqlconn.Open();
-
+            if(Session["reCMD"] != null)
+                registerState.Text = Session["reCMD"].ToString();
 
 
             if (R_name != "" && R_password != "" && R_email != "" && R_tel != "" && R_address != "")
             {
 
-                string sqlInquire = $"INSERT INTO Customers(name,password,email,tel,address) VALUES(@name , @password ,@email ,@tel, @address) ";
+                string sqlInquire = $"INSERT INTO Customers(name,password,email,tel,address) " +
+                    $"VALUES(@name , @password ,@email ,@tel, @address) ";
 
                 SqlCommand cmd = new SqlCommand(sqlInquire, sqlconn);
 
@@ -70,10 +72,12 @@ namespace Topic_10
                 cmd.Parameters.Add("@address", SqlDbType.NVarChar);
                 cmd.Parameters["@address"].Value = R_address;
 
-                cmd.ExecuteNonQuery();
+                reCMD = cmd.ExecuteNonQuery();
+                Session["reCMD"] = reCMD.ToString();
 
             }
             sqlconn.Close();
+            //Response.Redirect("T_index.aspx");
         }
     }
 }

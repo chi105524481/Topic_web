@@ -99,8 +99,8 @@ namespace Topic_10
             SqlConnection sqlconn = new SqlConnection(sql_data);
             sqlconn.Open();
             //新增 Orders
-            string sqlInsertOrders = $"INSERT INTO Orders(CustomersID,PetsFoodID,amount,amountDue) " +
-                $"VALUES(@CustomersID , @PetsFoodID ,@amount ,@amountDue) ";            
+            string sqlInsertOrders = $"INSERT INTO Orders(CustomerID,PetsFoodID,amount,amountDue) " +
+                $"VALUES(@CustomerID , @PetsFoodID ,@amount ,@amountDue) ";            
 
             //查詢 Carts
             string sqlSelectCustomers = $"SELECT *  FROM Cart , PetsFood " +
@@ -122,8 +122,8 @@ namespace Topic_10
                 int B_PetsFoodID = Convert.ToInt32(dr["PetsFoodID"]);
                 int B_amount = Convert.ToInt32(dr["amount"]);
 
-                cmdInsert.Parameters.Add("@CustomersID", SqlDbType.Int);
-                cmdInsert.Parameters["@CustomersID"].Value = B_CustomersID;
+                cmdInsert.Parameters.Add("@CustomerID", SqlDbType.Int);
+                cmdInsert.Parameters["@CustomerID"].Value = B_CustomersID;
                 cmdInsert.Parameters.Add("@PetsFoodID", SqlDbType.Int);
                 cmdInsert.Parameters["@PetsFoodID"].Value = B_PetsFoodID;
                 cmdInsert.Parameters.Add("@amount", SqlDbType.Int);

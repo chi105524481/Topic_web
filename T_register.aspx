@@ -73,6 +73,7 @@
                     </div>                    
 
                     <div class="form_row">
+                        <asp:Label ID="registerState" runat="server" Text=""></asp:Label>
 <%--                        <div class="terms">
                         <input type="checkbox" name="terms" />
                         I agree to the <a href="#">terms &amp; conditions</a>                        </div>--%>

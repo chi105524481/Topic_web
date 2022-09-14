@@ -34,14 +34,14 @@ namespace Topic_10
             //左邊框架顯示(訂單)
             if (Session["login"] == "true" && Session["username"] != null)
             { 
-                string sqlInquire = "SELECT *  FROM Orders , PetsFood " +
-                "where Orders.customersID = 1003 and Orders.PetsFoodID = PetsFood.id";
+                string sqlInquire = $"SELECT *  FROM Orders , PetsFood " +
+                 $"where Orders.customerID = 0 and Orders.PetsFoodID = PetsFood.id";
                 string s_data = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["petsConnectionString3"].ConnectionString;
                 SqlConnection conn = new SqlConnection(s_data);
                 if (Session["userID"] != null)
                 {
-                    sqlInquire = "SELECT *  FROM Orders , PetsFood " +
-                    "where Orders.customersID = 1003 and Orders.PetsFoodID = PetsFood.id";
+                    sqlInquire = $"SELECT *  FROM Orders , PetsFood " +
+                    $"where Orders.customerID = {Session["userID"]} and Orders.PetsFoodID = PetsFood.id";
                 }
                 SqlCommand cmd = new SqlCommand(sqlInquire, conn);
                 conn.Open();

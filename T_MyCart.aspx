@@ -93,7 +93,6 @@
             </div>	
             
         <div class="clear">
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             </div>
         </div><!--end of left content-->
         

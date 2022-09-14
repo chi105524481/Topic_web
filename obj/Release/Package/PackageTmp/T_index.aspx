@@ -18,7 +18,7 @@
             <ul>
             <li><a href="T_S_dogCan.aspx">&#29399;&#29399;</a></li>
             <li><a href="T_S_catCan.aspx">&#35987;&#35987;</a></li>
-            <li><a href="">&#35387;&#20874;</a></li>
+            <li><a href="T_register.aspx">&#35387;&#20874;</a></li>
             <li><a href="logout.ashx"><asp:Literal ID="logInOut" runat="server"></asp:Literal></a></li>
             </ul>
         </div>     
