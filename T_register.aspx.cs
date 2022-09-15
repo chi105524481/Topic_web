@@ -15,11 +15,7 @@ namespace Topic_10
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            R_name.Text = "";
-            R_passwd.Text = "";
-            R_email.Text = "";
-            R_tel.Text = "";
-            R_address.Text = "";
+
             if (Session["login"] == "true" && Session["username"] != null)
             {
                 register_status.Text = "Hello ! " + Session["username"].ToString();
@@ -49,8 +45,6 @@ namespace Topic_10
 
             SqlConnection sqlconn = new SqlConnection(sql_data);
             sqlconn.Open();
-            if(Session["reCMD"] != null)
-                registerState.Text = Session["reCMD"].ToString();
 
 
             if (R_name != "" && R_password != "" && R_email != "" && R_tel != "" && R_address != "")
@@ -73,8 +67,12 @@ namespace Topic_10
                 cmd.Parameters["@address"].Value = R_address;
 
                 reCMD = cmd.ExecuteNonQuery();
-                Session["reCMD"] = reCMD.ToString();
 
+                this.R_name.Text = "";
+                this.R_passwd.Text = "";
+                this.R_email.Text = "";
+                this.R_tel.Text = "";
+                this.R_address.Text = "";
             }
             sqlconn.Close();
             //Response.Redirect("T_index.aspx");
